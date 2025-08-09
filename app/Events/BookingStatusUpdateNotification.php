@@ -11,7 +11,8 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class BookingStatusUpdateNotification implements ShouldBroadcastNow{
+class BookingStatusUpdateNotification implements ShouldBroadcastNow
+{
     use Dispatchable, InteractsWithSockets, SerializesModels;
     public $bookingData;
     /**

@@ -44,3 +44,8 @@ Route::get('/events', [EventsController::class, 'events']);
 Route::get('/event/{event}', [EventsController::class, 'getEvent']);
 Route::put('/event/update/{id}', [EventsController::class, 'updateEvent']);
 Route::post('/event-add', [EventsController::class, 'createEvent']);
+
+Route::delete('/event-delete/{id}', [EventsController::class, 'deleteEvent']);
+
+
+// Route::post('/event/update/{id}', [EventsController::class, 'updateEvent']);
