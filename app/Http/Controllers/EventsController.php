@@ -25,73 +25,7 @@ class EventsController extends Controller
         ], 200);
     }
 
-    //  public function updateEvent(Request $request, $id){
-
-    //     // dd(Event::findOrFail($id));
-
-    //     // print_r($request->all());exit;
-    //     // print_r($request->id);exit;
-    //     $request->validate([
-    //         'title' => 'required',
-    //         'start_time' => 'required',
-    //         'end_time' => 'required',
-    //         'ticket_price' => 'required',
-    //     ]);
-
-    //     $event = Event::findOrFail($id);
-    //    //dd($event);
-    //     // $event->update($request->all());
-
-    //     $event->update($request->except('event_image'));
-
-    //     if ($request->hasFile('event_image')) {
-    //         if ($event->event_image) {
-    //             Storage::delete('public/' . $event->event_image); // Delete old image
-    //         }
-
-    //         $image = $request->file('event_image');
-    //         $image->storeAs('event_images', $event->event_image);
-    //         // $imagePath = $request->file('event_image')->store('event_image', 'public');
-    //         // $event->image = $imagePath;
-    //         // $event->save();
-    //     }
-
-    //     return response()->json(['message' => 'update success', 'data' => $event]);
-    // }
-
-
-
-//     public function updateEvent(Request $request,$id){
-//     $request->validate([
-//         'title' => 'required',
-//         'start_time' => 'required',
-//         'end_time' => 'required',
-//         'ticket_price' => 'required',
-//     ]);
-
-
-//     $event = Event::findOrFail($id);
-//     $event->update($request->except('event_image'));
-//     // Handle event image if provided
-//     if ($request->hasFile('event_image')) {
-
-//         if (!empty($event->event_image)) {
-//             Storage::delete('event_images' . basename($event->event_image));
-//         }
-//          // Store new image with unique name
-//         $image = $request->file('event_image');
-//         $imageName ='event_image_'.time(). '.' . $image->getClientOriginalExtension();
-//         $image->storeAs('event_images', $imageName);
-//         $event->event_image = 'event_images/' . $imageName;
-//         $event->save();
-
-//     }
-
-//     return response()->json([
-//         'message' => 'Update success',
-//         'data' => $event
-//     ]);
-// }
+   
 
 
 
